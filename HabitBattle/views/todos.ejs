@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <h1>HabitBattle!</h1>
+    <h3>Building good habits is a constant battle, document what habits you want to keep up with as well which are good and bad, use your characters stats later in battle!</h3>
+    <ul>
+    <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <h2><%= user.userName %> has <%= left %> habits they are attempting to master</h2>
+
+    <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./index_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./index_files/style.css">
+		</head>
+        
+        
+        <body><img src="https://i.imgur.com/UdeQw0g.jpg" width="100" height="100">  <h6>Health</h6>
+        <progress id="health" value="100" max="100"></progress>
+        <h6>Exp</h6>
+      <progress id="exp" value="0" max="100"></progress>
+        <h6>Battle Points</h6>
+      <progress id="exp" value="0" max="100"></progress>
+  
+
+        
+        
+        
+     
+            
+		</div>
+
+        <div class="col-md-12">
+   
+    
+           
+		<div class="row">
+			<div class="listItems col-12">
+				<ul class="col-12 offset-0 col-sm-8 offset-sm-2">
+				</ul>
+			</div>
+		</div>
+        
+
+        <div class="col-md-6">    
+            <div class="row">
+                <div class="col-xs-4">
+                     <button type="button" class="incExp">Participating in Good Habit</button>
+                     
+                </div>
+                <div class="col-xs-4">
+          <button class="decHealth">
+            Participated in Bad Habit
+          </button>
+                </div>
+                
+            </div><!--.row-->
+        
+            <div class="row">
+                <div class="col-xs-4">
+                     
+                </div>
+                
+                
+            </div><!--.row-->
+        
+            <div class="row">
+                <div class="col-xs-4">
+                     
+                </div>
+                
+                
+        </div><!--.row-->
+        
+        <hr>
+        
+        </div>
+
+
+
+	
+
+
+  
+<script>
+
+const decHealth= document.querySelectorAll('.decHealth')
+
+
+Array.from(decHealth).forEach((el)=>{
+el.addEventListener('click', decHealth)
+
+function decHealth(){
+        var health = document.getElementById("health")
+        health.value -= 10; 
+        $('.status span').html('Picachu  used <b>BOLT</b>, <i>Super effective</i>, Charmander: '+dmg+'hp');
+
+            }
+        })
+
+
+const incExp= document.querySelectorAll('.incExp')
+
+
+Array.from(incExp).forEach((el)=>{
+el.addEventListener('click', incExp)
+
+function incExp(){
+        var exp = document.getElementById("exp")
+        exp.value += 10; 
+
+            }
+        })
+
+
+</script>
+
+
+
+
+
+</div></body></html>
